@@ -1,0 +1,6 @@
+{
+  "name": "Canon — Enterprise Brand Governance & Pre-Publication Review",
+  "description": "Intelligent pre-publication review platform featuring content intent auditing, claim verification matrices, guideline health analytics, and historical guideline CI simulations.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
