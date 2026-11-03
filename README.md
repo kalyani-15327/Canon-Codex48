@@ -1,9 +1,11 @@
- CANON
- Intelligent Enterprise Brand Governance & Pre-Publication Review Platform
+# CANON
+### Intelligent Enterprise Brand Governance & Pre-Publication Review Platform
 
-Protecting brand identity, factual accuracy, and content consistency across the content lifecycle.
+**Protecting brand identity, factual accuracy, and content consistency across the content lifecycle.**
 
-1. About the Project
+---
+
+## 1. About the Project
 
 Canon is an intelligent enterprise brand governance platform designed to help organizations maintain brand consistency, verify factual claims, and reduce the risk of publishing misleading or non-compliant content.
 
@@ -13,7 +15,7 @@ Canon addresses this challenge by bringing content auditing, claim verification,
 
 Our goal is to establish a continuous brand governance layer that works throughout the content lifecycle—from content creation to review and monitoring.
 
-2. Problem Statement
+## 2. Problem Statement
 
 Organizations generate content across multiple platforms, teams, and AI tools. This creates several challenges:
 
@@ -28,20 +30,20 @@ Traditional manual review processes can be time-consuming and difficult to scale
 
 Canon aims to address these challenges through an integrated content governance workflow.
 
-3. Key Features
+## 3. Key Features
 
 Canon consists of seven interconnected modules.
 
- 1. Canon Gateway
- Pre-publication content governance  
+### 1. Canon Gateway
+**Pre-publication content governance**
 
 - Provides brand guidance during content creation.
 - Supports review of AI-generated content.
 - Identifies potential brand and factual compliance issues before publication.
 - Connects submitted drafts to the Content Auditor.
 
- 2. Content Auditor & Intent Engine
- Intelligent content compliance review**
+### 2. Content Auditor & Intent Engine
+**Intelligent content compliance review**
 
 - Evaluates content against configured brand guidelines.
 - Identifies potential violations and problematic claims.
@@ -49,8 +51,8 @@ Canon consists of seven interconnected modules.
 - Suggests corrections while aiming to preserve the original content intent.
 - Supports content review and publication-readiness assessment.
 
- 3. Claim Ledger & Verification Matrix
- Factual claim tracking and verification**
+### 3. Claim Ledger & Verification Matrix
+**Factual claim tracking and verification**
 
 - Extracts factual and promotional claims from content.
 - Tracks approved facts and supporting evidence.
@@ -58,34 +60,34 @@ Canon consists of seven interconnected modules.
 - Tracks expiry information for approved facts.
 - Supports human verification and review decisions.
 
- 4. Guideline Health & Guideline CI
- Continuous brand guideline improvement**
+### 4. Guideline Health & Guideline CI
+**Continuous brand guideline improvement**
 
 - Identifies frequently violated or unclear guidelines.
 - Helps analyze recurring compliance issues.
 - Supports suggestions for clearer guideline wording.
 - Allows proposed guideline changes to be evaluated against sample content.
 
- 5. Audit Trail & Team Compliance Log
- Accountability and traceability**
+### 5. Audit Trail & Team Compliance Log
+**Accountability and traceability**
 
 - Records content audit activities.
 - Tracks corrections, overrides, and review decisions.
 - Maintains a history of relevant claim and guideline changes.
 - Supports content governance and compliance tracking.
 
- 6. Canon Watch
- Post-publication fact monitoring**
+### 6. Canon Watch
+**Post-publication fact monitoring**
 
 - Tracks approved facts associated with stored content.
 - Identifies content potentially affected by changed or expired facts.
 - Highlights outdated information.
 - Supports suggested corrections and subsequent human review.
 
- 7. Format Adapters
- Multi-format content ingestion**
+### 7. Format Adapters
+**Multi-format content ingestion**
 
- Designed to support content ingestion from:
+Designed to support content ingestion from:
 
 - Web pages and URLs.
 - HTML emails.
@@ -93,28 +95,76 @@ Canon consists of seven interconnected modules.
 
 The extracted content can be passed into the Content Auditor for compliance review. SRT validation can also include subtitle timing and characters-per-second (CPS) checks where implemented.
 
-4. End-to-End Workflow
+## 4. End-to-End Workflow
 
 Canon connects the modules through a continuous content governance process.
 
+```text
+       CONTENT CREATION
+              |
+       +------+------+
+       |             |
+ Canon Gateway   Format Adapters
+       |             |
+       +------+------+
+              |
+              v
+     CONTENT AUDITOR
+              |
+       +------+------+
+       |             |
+  Intent Analysis  Claim Extraction
+       |             |
+       |             v
+       |        CLAIM LEDGER
+       |             |
+       |       Fact Verification
+       |             |
+       +------+------+
+              |
+              v
+        HUMAN REVIEW
+              |
+       +------+------+
+       |             |
+    Approved      Revisions
+       |             |
+       v             |
+    AUDIT TRAIL <----+
+       |
+       v
+    CANON WATCH
+       |
+  Fact Changes or Expiry
+       |
+  Affected Content
+       |
+  Suggested Corrections
+       |
+  Human Re-review
+
+ GUIDELINE HEALTH & CI
+       |
+ Recurring Findings
+       |
+ Guideline Improvement
+```
 
 Human approval remains an essential part of the governance workflow. Canon does not automatically publish content.
 
-5. Technology Stack
+## 5. Technology Stack
 
-Frontend: React and TypeScript.
+| Technology | Purpose |
+|---|---|
+| React | User interface development |
+| TypeScript | Type safety and application logic |
+| Vite | Development server and build tooling |
+| Tailwind CSS | Responsive interface styling |
+| Lucide React | Icons |
+| LocalStorage | Prototype data persistence |
+| Git & GitHub | Version control and collaboration |
 
-Build Tool: Vite.
-
-Styling: Tailwind CSS.
-
-Icons: Lucide React.
-
-Data Models: TypeScript interfaces and shared application types.
-
-Prototype Data Persistence: Browser LocalStorage.
-
-6. Project Structure
+## 6. Project Structure
 
 The project follows a modular frontend architecture.
 
@@ -156,7 +206,7 @@ canon/
 └── README.md
 ```
 
-8. Technical Architecture
+## 8. Technical Architecture
 
 Canon uses a modular frontend architecture with reusable React components, dedicated service modules, and shared TypeScript data structures.
 
@@ -172,7 +222,7 @@ The architecture is designed to support future integration with:
 - Centralized databases and backend services.
 - Enterprise authentication and role-based access control.
 
-9. Current Implementation Scope
+## 9. Current Implementation Scope
 
 Canon is developed as a hackathon prototype.
 
@@ -180,7 +230,7 @@ The implementation uses configured brand guidelines, sample enterprise data, and
 
 Some integrations and AI-related operations may be simulated or limited to the current prototype environment. Live external monitoring, production-scale evidence verification, and external AI integrations should not be assumed unless explicitly connected and tested.
 
-10. Future Roadmap
+## 10. Future Roadmap
 
 Our future development is planned in four phases.
 
